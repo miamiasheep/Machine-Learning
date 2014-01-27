@@ -1,0 +1,3 @@
+function [x1,x2,y]=generateData()
+    x1=rand
+end

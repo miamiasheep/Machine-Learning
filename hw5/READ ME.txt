@@ -1,0 +1,25 @@
+
+first裡包含
+第一提到第五題所需要的程式。
+1~2題打first執行即可
+3~5題打three執行即可
+
+
+thirteen裡包含第13題所需用到的程式
+要執行他們打
+thirteen(100)   #100是指要sample 100次
+
+
+fourteen裡包含14~16題
+14題打fourteen
+15題打fifteen
+16題打sixteen
+執行即可
+他們分別會output產生
+14. Ein_fourteen.txt
+    Ecv_fourteen.txt
+15. Ein_fifteen.txt
+    Ecv_fifteen.txt
+16. Ein_sixteen.txt
+    Ecv_sixteen.txt
+    Ein_kernels.txt

@@ -1,0 +1,53 @@
+function w=first()
+    X=[1    0 ;    %x1
+       0    1 ;    %x2
+       0    -1;    %x3
+      -1    0 ;    %x4
+       0    2 ;    %x5
+       0    -2 ;   %x6
+       -2   0     %x7
+       ];
+   y=[-1;     %x1
+       -1;    %x2
+       -1;    %x3
+       1;     %x4
+       1;     %x5
+       1;     %x6
+       1     %x7 
+      ];
+   myPlot(X,y,0,0);
+   Z=ones(size(X,1),size(X,2));
+   for i=1:size(X,1)
+      Z(i,1)=(X(i,2))^2-2*X(i,1)-2;
+      Z(i,2)=(X(i,1))^2-2*X(i,2)+3;
+   end
+   myPlot(Z,y,0,1);
+   y=linspace(-10,10,10000);
+   plot(-0.5,y);
+   hold on;
+   plot(0,y);
+   hold on;
+   plot(-1,y);
+   hold off;
+   pause;
+   % Quadratic Programming for Hard Margin SVM %    % can be a function of
+   % Z and y     
+  w=hardMarginSVM(Z,y);
+
+  %%%%%%%%%%%%%%%%%
+  myPlot(X,y,0,1); 
+
+  ezplot('2*x2^2-4*x1-3=0');
+  hold on;
+  ezplot('2*x2^2-4*x1-3=1');
+  hold on;
+  ezplot('2*x2^2-4*x1-3=-1');
+  hold off;
+  %{
+  x1=linspace(-0.75,1);
+  x2=sqrt((4*x1+3)/2);
+  x3=-sqrt((4*x1+3)/2);
+  plot(x1,x2);
+  plot(x1,x3);
+  %}
+end
